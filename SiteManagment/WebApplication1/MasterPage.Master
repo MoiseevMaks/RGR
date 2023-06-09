@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebApplication1.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <%--bootstrap css --%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--datatables css --%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+     <%--fontawesome css --%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+     <%--bootstap js --%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+     <%--jquery --%>
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+     <%--pooper js --%>
+    <script src="bootstrap/js/popper.min.js"></script>
+
+
+     <%--снизу цвет --%>
+    <link href="custom%20css/StyleSheet1.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div>
+            <nav class ="navbar navbar-expand-lg navbar-light">
+           <a class="navbar-brand" href="home-page.aspx">               
+                Site.Test
+           </a>
+
+                <%--mr-auto чет разделяет лево право--%>
+                    <ul class="navbar-nav"> <%--LinkButton потому что динамические ссылки типо --%>
+                        
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Sign Up</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton8" runat="server" Visible="False" OnClick="LinkButton8_Click">SearchTest</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton9" runat="server" Visible="False" OnClick="LinkButton9_Click">Created tasks</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" Visible="False" OnClick="LinkButton3_Click">Profile</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" Visible="False" OnClick="LinkButton4_Click">Logout</asp:LinkButton>
+                        </li>
+                    </ul>
+            </nav>
+        </div>
+        
+  <!-- Main Content Placeholder -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+  <!-- ./Main Content Placeholder -->
+
+         <!-- Footer -->
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server" Visible="False" OnClick="LinkButton6_Click">Change Tasks</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton7" runat="server" Visible="False" OnClick="LinkButton7_Click">Change Users</asp:LinkButton>
+                        </p>
+                   </div>
+
+                </div>
+            </div>
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p style="color:whitesmoke">&copy Moiseev Maksim IBS-22</p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- ./Footer -->
+
+
+
+
+
+    </form>
+</body>
+</html>
